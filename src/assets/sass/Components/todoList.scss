@@ -31,9 +31,9 @@
           outline: none;
           cursor: pointer;
           background: none;
-          &:active{
+          &:active {
             transform: scale(0.96) translateY(-2px);
-        }
+          }
           .i-edit {
             color: #028575;
             font-size: 18px;
@@ -74,9 +74,9 @@
           font-size: 20px;
           cursor: pointer;
           background: none;
-          &:active{
+          &:active {
             transform: scale(0.96) translateY(-2px);
-        }
+          }
           .i-save {
             color: #028575;
             margin: 0 10px;

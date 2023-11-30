@@ -104,7 +104,12 @@ const TodoForm = () => {
           </div>
         </div>
         <div className="form">
-          <input type="text" placeholder="Enter new task" value={todoText} onChange={handleChangeInput} />
+          <input
+            type="text"
+            placeholder="Enter new task"
+            value={todoText}
+            onChange={handleChangeInput}
+          />
           <button onClick={handleAddTodo}>Add</button>
         </div>
         <TodoList

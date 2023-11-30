@@ -7,9 +7,6 @@ import { CiEdit } from "react-icons/ci";
 import { CiSaveDown2 } from "react-icons/ci";
 import { MdCancel } from "react-icons/md";
 
-
-
-
 const TodoItem = ({
   todo,
   handleDeleteTodo,
@@ -40,15 +37,18 @@ const TodoItem = ({
             value={editedText}
             onChange={(e) => setEditedText(e.target.value)}
           />
-         <div className="button-con">
-         <button onClick={handleSaveEdit}><CiSaveDown2 className="i-save"/></button>
-          <button onClick={()=> setIsEditing(false)}><MdCancel className="i-cancel"/></button>
-         </div>
+          <div className="button-con">
+            <button onClick={handleSaveEdit}>
+              <CiSaveDown2 className="i-save" />
+            </button>
+            <button onClick={() => setIsEditing(false)}>
+              <MdCancel className="i-cancel" />
+            </button>
+          </div>
         </div>
       ) : (
         <div className="flex">
           <span
-          
             onClick={() => handleCompleted(todo.id)}
             style={{
               textDecoration: todo.isCompleted ? "line-through" : "none",
@@ -56,10 +56,14 @@ const TodoItem = ({
           >
             {todo.text}
           </span>
-         <div className="button-con">
-           <button onClick={handleEdit}><CiEdit className="i-edit"/></button>
-          <button onClick={() => handleDeleteTodo(todo.id)}><FaTrash className="i-trash" /></button>
-         </div>
+          <div className="button-con">
+            <button onClick={handleEdit}>
+              <CiEdit className="i-edit" />
+            </button>
+            <button onClick={() => handleDeleteTodo(todo.id)}>
+              <FaTrash className="i-trash" />
+            </button>
+          </div>
         </div>
       )}
     </li>

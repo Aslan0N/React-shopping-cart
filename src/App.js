@@ -1,13 +1,11 @@
 // React
-import React from 'react'
+import React from "react";
 
 // Components
-import TodoForm from './Components/TodoForm'
+import TodoForm from "./Components/TodoForm";
 
 const App = () => {
-  return (
-      <TodoForm/>
-  )
-}
+  return <TodoForm />;
+};
 
-export default App
+export default App;
