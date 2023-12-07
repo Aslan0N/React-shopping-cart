@@ -1,0 +1,109 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "price":20.00,
+      "coverImage": "https://img.kitapyurdu.com/v1/getImage/fn:4962/wh:true/wi:800"
+    },
+    {
+      "id": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price":20.00,
+      "coverImage": "https://i.dr.com.tr/cache/500x400-0/originals/0000000239509-1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "George Orwell",
+      "price":20.00,
+      "coverImage": "https://1k-cdn.com/resimler/kitaplar/56586_6f66e_1619754763.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/61NNCPQJqpL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/7108sdEUEGL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 7,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/41ctJA7G+EL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/61IixzhezrL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/71y4X5150dL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "author": "J.R.R. Tolkien",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/61mn09OvTQL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/81IpKyby3OL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 12,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/81fiotccNCL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 13,
+      "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "author": "C.S. Lewis",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/81rJm9qk3HL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 14,
+      "title": "The Shining",
+      "author": "Stephen King",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/71oXpXeWbML._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 15,
+      "title": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "price":20.00,
+      "coverImage": "https://m.media-amazon.com/images/I/91zBDBmaaNL._AC_UF1000,1000_QL80_.jpg"
+    }
+  ]
+}
