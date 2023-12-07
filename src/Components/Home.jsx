@@ -14,14 +14,35 @@ const Home = () => {
   // Context
   const { books, setBooks } = useContext(BasketContext);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  
+  // const fetchData = () => {
+  //   let dataURL = "http://localhost:3002/books";
+  //   axios.get(dataURL).then((response) => setBooks(response.data))
+  //   .catch((error) => {
+  //     console.error("Error fetching data:", error);
+  //   });;
+  // };
+  
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const fetchData = () => {
-    let dataURL = "http://localhost:3001/books";
-    axios.get(dataURL).then((response) => setBooks(response.data));
-  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let dataURL = "http://localhost:3002/books";
+        const response = await axios.get(dataURL);
+        setBooks(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  
+    fetchData();
+  }, [setBooks]);
+  
+
 
   return (
     <div className="container">
