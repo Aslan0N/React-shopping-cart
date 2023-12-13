@@ -1,55 +1,17 @@
 // React
-import React, { useContext } from "react";
+import React from "react";
 
-// Context
-import { BasketContext } from "../Context/BasketContext";
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+
+// Actions
+import { decrease, increase } from "../Redux/Action";
 
 const Basket = () => {
-  // Context
-  const { basket, setBasket } = useContext(BasketContext);
+  // Reducer
+  const basket = useSelector((store) => store.BasketReducer);
 
-  //   Handle Decrease
-  const handleDecrease = (id) => {
-    const updateBasket = basket
-      .map((book) => {
-        if (book.id === id) {
-          if (book.count > 1) {
-            return { ...book, count: book.count - 1 };
-          } else {
-            return null;
-          }
-        }
-        return book;
-      })
-      .filter(Boolean);
-    setBasket(updateBasket);
-    // Local Storage Yenilənməsi
-    localStorage.setItem("Books", JSON.stringify(updateBasket));
-  };
-
-  // Handle Increase
-  const handleIncrease = (id) => {
-    const updateBasket = basket.map((book) => {
-      if (book.id === id) {
-        return { ...book, count: book.count + 1 };
-      }
-      return book;
-    });
-    setBasket(updateBasket);
-    // Local Storage Yenilənməsi
-    localStorage.setItem("Books", JSON.stringify(updateBasket));
-  };
-
-  // Handle Remove
-  const handleRemove = (id) => {
-    const updatedBasket = basket.filter((book) => book.id !== id);
-
-    setBasket(updatedBasket);
-
-    // Local Storage Yenilənməsi
-    localStorage.setItem("Books", JSON.stringify(updatedBasket));
-  };
-
+  const dispatch = useDispatch();
   return (
     <ul>
       {basket ? (
@@ -59,10 +21,9 @@ const Basket = () => {
               <div>
                 <img width={100} src={book.coverImage} alt="CoverImage" />
                 <p>{book.title}</p>
-                <button onClick={() => handleIncrease(book.id)}>(+)</button>
+                <button onClick={() => dispatch(increase(book.id))}>(+)</button>
                 <span>{book.count}</span>
-                <button onClick={() => handleDecrease(book.id)}>(-)</button>
-                <button onClick={() => handleRemove(book.id)}>Remove</button>
+                <button onClick={() => dispatch(decrease(book.id))}>(-)</button>
               </div>
             </li>
           );

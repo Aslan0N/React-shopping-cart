@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Axios
 import axios from "axios";
@@ -7,26 +7,8 @@ import axios from "axios";
 // SingleCard
 import SingleCard from "./SingleCard";
 
-// Context
-import { BasketContext } from "../Context/BasketContext";
-
 const Home = () => {
-  // Context
-  const { books, setBooks } = useContext(BasketContext);
-
-  
-  // const fetchData = () => {
-  //   let dataURL = "http://localhost:3002/books";
-  //   axios.get(dataURL).then((response) => setBooks(response.data))
-  //   .catch((error) => {
-  //     console.error("Error fetching data:", error);
-  //   });;
-  // };
-  
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,11 +20,9 @@ const Home = () => {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, [setBooks]);
-  
-
 
   return (
     <div className="container">

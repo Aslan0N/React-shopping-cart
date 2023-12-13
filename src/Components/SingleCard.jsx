@@ -1,12 +1,14 @@
 // React
-import React, { useContext } from "react";
+import React from "react";
 
-// Context
-import { BasketContext } from "../Context/BasketContext";
+// Redux
+import { useDispatch } from "react-redux";
+
+// Action
+import { addBasket } from "../Redux/Action";
 
 const SingleCard = ({ prop }) => {
-  // Context
-  const { addBook } = useContext(BasketContext);
+  const dispatch = useDispatch();
 
   return (
     <div className="col-12 col-sm-12 col-md-6 col-lg-3">
@@ -19,7 +21,7 @@ const SingleCard = ({ prop }) => {
           <h5>{prop.author}</h5>
           <p>{prop.price}$</p>
         </div>
-        <button onClick={() => addBook(prop.id)}>Add to basket</button>
+        <button onClick={() => dispatch(addBasket(prop))}>Add to basket</button>
       </div>
     </div>
   );
