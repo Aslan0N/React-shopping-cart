@@ -8,6 +8,8 @@ import axios from "axios";
 import SingleCard from "./SingleCard";
 
 const Home = () => {
+
+  // State
   const [books, setBooks] = useState([]);
 
   useEffect(() => {

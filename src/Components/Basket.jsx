@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrease, increase } from "../Redux/Action";
 
 const Basket = () => {
+  
   // Reducer
   const basket = useSelector((store) => store.BasketReducer);
 
